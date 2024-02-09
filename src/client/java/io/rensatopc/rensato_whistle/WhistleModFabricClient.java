@@ -1,4 +1,4 @@
-package whistlemodfabric;
+package io.rensatopc.rensato_whistle;
 
 import net.fabricmc.api.ClientModInitializer;
 

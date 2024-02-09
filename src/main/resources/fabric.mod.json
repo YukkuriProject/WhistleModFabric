@@ -1,41 +1,44 @@
 {
 	"schemaVersion": 1,
-	"id": "whistlemodfabric",
+	"id": "rensato_whistle",
 	"version": "${version}",
-	"name": "WhistleModFabric",
-	"description": "This is an example description! Tell everyone what your mod is about!",
-	"authors": [
-		"Me!"
-	],
+	"name": "Whistle",
+	"description": "Whistle.",
 	"contact": {
-		"homepage": "https://fabricmc.net/",
-		"sources": "https://github.com/FabricMC/fabric-example-mod"
+		"homepage": "https://modrinth.com/mod/whistle"
 	},
-	"license": "CC0-1.0",
-	"icon": "assets/whistlemodfabric/icon.png",
+	"authors": [
+		"rensatopc"
+	],
+	"icon": "assets/rensato_whistle/icon.png",
 	"environment": "*",
 	"entrypoints": {
 		"main": [
-			"whistlemodfabric.WhistleModFabric"
+			"io.rensatopc.rensato_whistle.WhistleModFabric"
 		],
 		"client": [
-			"whistlemodfabric.WhistleModFabricClient"
+			"io.rensatopc.rensato_whistle.WhistleModFabricClient"
 		]
 	},
 	"mixins": [
-		"whistlemodfabric.mixins.json",
+		"rensato_whistle.mixins.json",
 		{
-			"config": "whistlemodfabric.client.mixins.json",
+			"config": "rensato_whistle.client.mixins.json",
 			"environment": "client"
 		}
 	],
 	"depends": {
 		"fabricloader": ">=0.15.6",
-		"minecraft": "~1.20.4",
+		"minecraft": "~1.20",
 		"java": ">=17",
 		"fabric-api": "*"
 	},
 	"suggests": {
 		"another-mod": "*"
+	},
+	"custom": {
+		"modmenu": {
+			"update_checker": true
+		}
 	}
 }
