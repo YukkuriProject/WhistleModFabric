@@ -1,5 +1,7 @@
 package io.rensatopc.rensato_whistle.registers.tab;
 
+import io.rensatopc.rensato_whistle.items.ItemWhistle;
+import io.rensatopc.rensato_whistle.registers.WhistleModItems;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
 import net.minecraft.text.Text;
@@ -9,7 +11,7 @@ import java.util.function.Supplier;
 public class WhistleModMainTab {
     public static ItemStack[] items = ((Supplier<ItemStack[]>) () -> {
         return new ItemStack[] {
-
+                WhistleModItems.WHISTLE.getDefaultStack()
         };
     }).get();
 
@@ -21,6 +23,7 @@ public class WhistleModMainTab {
                 e.add(itemStack);
             }
         });
+        builder.icon(() -> WhistleModItems.WHISTLE.getDefaultStack());
 
         return builder.build();
     }
