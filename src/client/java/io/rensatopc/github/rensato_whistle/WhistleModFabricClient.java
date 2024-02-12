@@ -1,4 +1,4 @@
-package io.rensatopc.rensato_whistle;
+package io.rensatopc.github.rensato_whistle;
 
 import net.fabricmc.api.ClientModInitializer;
 

@@ -2,5 +2,6 @@
   "itemGroup.whistle_main": "ホイッスルMod",
 
   "item.rensato_whistle.whistle": "ホイッスル",
-  "string.whistle_cannotuse": "このワールドにプレイヤーがいる場合のみ使用できます"
+  "block.rensato_whistle.whistle_block": "ホイッスルブロック",
+  "string.whistle_cannotuse": "このワールドに他のプレイヤーがいる場合のみ使用できます"
 }

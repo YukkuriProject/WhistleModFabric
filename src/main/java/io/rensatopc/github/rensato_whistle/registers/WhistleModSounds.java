@@ -1,6 +1,6 @@
-package io.rensatopc.rensato_whistle.registers;
+package io.rensatopc.github.rensato_whistle.registers;
 
-import io.rensatopc.rensato_whistle.WhistleModFabric;
+import io.rensatopc.github.rensato_whistle.WhistleModFabric;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.sound.SoundEvent;

@@ -1,6 +1,6 @@
-package io.rensatopc.rensato_whistle.registers.tab;
+package io.rensatopc.github.rensato_whistle.registers.tab;
 
-import io.rensatopc.rensato_whistle.WhistleModFabric;
+import io.rensatopc.github.rensato_whistle.WhistleModFabric;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;

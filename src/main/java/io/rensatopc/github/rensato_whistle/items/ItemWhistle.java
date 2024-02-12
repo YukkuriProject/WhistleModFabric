@@ -1,6 +1,6 @@
-package io.rensatopc.rensato_whistle.items;
+package io.rensatopc.github.rensato_whistle.items;
 
-import io.rensatopc.rensato_whistle.registers.WhistleModSounds;
+import io.rensatopc.github.rensato_whistle.registers.WhistleModSounds;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;

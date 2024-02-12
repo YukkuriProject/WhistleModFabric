@@ -3,7 +3,7 @@
 	"id": "rensato_whistle",
 	"version": "${version}",
 	"name": "Whistle",
-	"description": "Whistle.",
+	"description": "This mod is to add Whistle to your server.",
 	"contact": {
 		"homepage": "https://modrinth.com/mod/whistle"
 	},
@@ -14,10 +14,10 @@
 	"environment": "*",
 	"entrypoints": {
 		"main": [
-			"io.rensatopc.rensato_whistle.WhistleModFabric"
+			"io.rensatopc.github.rensato_whistle.WhistleModFabric"
 		],
 		"client": [
-			"io.rensatopc.rensato_whistle.WhistleModFabricClient"
+			"io.rensatopc.github.rensato_whistle.WhistleModFabricClient"
 		]
 	},
 	"mixins": [
