@@ -2,13 +2,10 @@ package io.rensatopc.github.rensato_whistle.blocks;
 
 import io.rensatopc.github.rensato_whistle.items.ItemWhistle;
 import io.rensatopc.github.rensato_whistle.registers.WhistleModItems;
-import io.rensatopc.github.rensato_whistle.registers.WhistleModSounds;
 import io.rensatopc.github.rensato_whistle.util.Whistle;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.sound.SoundCategory;
-import net.minecraft.text.Text;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.Hand;
 import net.minecraft.util.hit.BlockHitResult;

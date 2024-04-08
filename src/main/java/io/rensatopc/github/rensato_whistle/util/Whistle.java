@@ -9,7 +9,7 @@ import net.minecraft.world.World;
 
 public class Whistle {
     public static void use(World world, PlayerEntity player, ItemWhistle whistle) {
-//        if (world.getPlayers().size() > 1) {
+        if (world.getPlayers().size() > 1) {
             player.getItemCooldownManager().set(whistle, 80);
 
             for (PlayerEntity target:world.getPlayers()) {
@@ -19,8 +19,8 @@ public class Whistle {
             }
 
             world.playSound(null, player.getBlockPos(), WhistleModSounds.WHISTLE_CLICK, SoundCategory.MASTER);
-//        } else {
-//            player.sendMessage(Text.translatable("string.rensato_whistle.whistle_cannotuse"), true);
-//        }
+        } else {
+            player.sendMessage(Text.translatable("string.rensato_whistle.whistle_cannotuse"), true);
+        }
     }
 }

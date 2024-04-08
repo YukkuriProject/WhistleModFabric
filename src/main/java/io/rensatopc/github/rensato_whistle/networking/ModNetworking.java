@@ -4,9 +4,7 @@ import io.rensatopc.github.rensato_whistle.WhistleModFabric;
 import io.rensatopc.github.rensato_whistle.items.ItemWhistle;
 import io.rensatopc.github.rensato_whistle.registers.WhistleModItems;
 import io.rensatopc.github.rensato_whistle.util.Whistle;
-import net.fabricmc.fabric.api.networking.v1.PacketType;
 import net.fabricmc.fabric.api.networking.v1.ServerPlayNetworking;
-import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.inventory.Inventory;
 import net.minecraft.util.Identifier;
 

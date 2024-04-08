@@ -1,12 +1,9 @@
 package io.rensatopc.github.rensato_whistle.items;
 
-import io.rensatopc.github.rensato_whistle.registers.WhistleModSounds;
 import io.rensatopc.github.rensato_whistle.util.Whistle;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
-import net.minecraft.sound.SoundCategory;
-import net.minecraft.text.Text;
 import net.minecraft.util.Hand;
 import net.minecraft.util.Rarity;
 import net.minecraft.util.TypedActionResult;
