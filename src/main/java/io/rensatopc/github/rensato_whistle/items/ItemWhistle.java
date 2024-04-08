@@ -1,6 +1,7 @@
 package io.rensatopc.github.rensato_whistle.items;
 
 import io.rensatopc.github.rensato_whistle.registers.WhistleModSounds;
+import io.rensatopc.github.rensato_whistle.util.Whistle;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
@@ -24,16 +25,8 @@ public class ItemWhistle extends Item {
     public TypedActionResult<ItemStack> use(World world, PlayerEntity player, Hand hand) {
         ItemStack itemStack = player.getStackInHand(hand);
 
-        if (world.getPlayers().size() > 1) {
-            for (PlayerEntity target:world.getPlayers()) {
-                if (!(target.getUuid() == player.getUuid())) {
-                    target.teleport(player.getX(), player.getY(), player.getZ());
-                }
-            }
-
-            world.playSound(null, player.getBlockPos(), WhistleModSounds.WHISTLE_CLICK, SoundCategory.MASTER);
-        } else {
-            player.sendMessage(Text.translatable("string.whistle_cannotuse"), true);
+        if (!world.isClient()) {
+            Whistle.use(world, player, this);
         }
 
         return TypedActionResult.consume(itemStack);

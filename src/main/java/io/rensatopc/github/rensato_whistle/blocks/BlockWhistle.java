@@ -1,6 +1,9 @@
 package io.rensatopc.github.rensato_whistle.blocks;
 
+import io.rensatopc.github.rensato_whistle.items.ItemWhistle;
+import io.rensatopc.github.rensato_whistle.registers.WhistleModItems;
 import io.rensatopc.github.rensato_whistle.registers.WhistleModSounds;
+import io.rensatopc.github.rensato_whistle.util.Whistle;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.entity.player.PlayerEntity;
@@ -12,6 +15,8 @@ import net.minecraft.util.hit.BlockHitResult;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 
+import java.util.Set;
+
 public class BlockWhistle extends Block {
     public BlockWhistle() {
         super(Settings.create()
@@ -21,16 +26,12 @@ public class BlockWhistle extends Block {
 
     @Override
     public ActionResult onUse(BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockHitResult hit) {
-        if (world.getPlayers().size() > 1) {
-            for (PlayerEntity target:world.getPlayers()) {
-                if (!(target.getUuid() == player.getUuid())) {
-                    target.teleport(player.getX(), player.getY(), player.getZ());
-                }
-            }
+        ItemWhistle whistle = (ItemWhistle) WhistleModItems.WHISTLE;
 
-            world.playSound(null, player.getBlockPos(), WhistleModSounds.WHISTLE_CLICK, SoundCategory.MASTER);
-        } else {
-            player.sendMessage(Text.translatable("string.whistle_cannotuse"), true);
+        if (player.getInventory().containsAny(Set.of(WhistleModItems.WHISTLE))) {
+            if (!player.getItemCooldownManager().isCoolingDown(whistle)) {
+                Whistle.use(world, player, whistle);
+            }
         }
 
         return ActionResult.SUCCESS;

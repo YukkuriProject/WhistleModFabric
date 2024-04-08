@@ -1,5 +1,6 @@
 package io.rensatopc.github.rensato_whistle;
 
+import io.rensatopc.github.rensato_whistle.networking.ModNetworking;
 import io.rensatopc.github.rensato_whistle.registers.WhistleModBlocks;
 import io.rensatopc.github.rensato_whistle.registers.WhistleModItems;
 import io.rensatopc.github.rensato_whistle.registers.WhistleModSounds;
@@ -15,5 +16,6 @@ public class WhistleModFabric implements ModInitializer {
 		WhistleModItems.register();
 		WhistleModSounds.register();
 		WhistleModBlocks.register();
+		ModNetworking.register();
 	}
 }
