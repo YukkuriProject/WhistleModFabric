@@ -1,6 +1,6 @@
 {
 	"schemaVersion": 1,
-	"id": "rensato_whistle",
+	"id": "whistle",
 	"version": "${version}",
 	"name": "Whistle",
 	"description": "This mod is to add Whistle to your server.",
@@ -8,29 +8,29 @@
 		"homepage": "https://modrinth.com/mod/whistle"
 	},
 	"authors": [
-		"rensatopc"
+		"thejustcube"
 	],
-	"icon": "assets/rensato_whistle/icon.png",
+	"icon": "assets/whistle/icon.png",
 	"environment": "*",
 	"entrypoints": {
 		"main": [
-			"io.rensatopc.github.rensato_whistle.WhistleModFabric"
+			"io.thejustcube.github.whistle.WhistleModFabric"
 		],
 		"client": [
-			"io.rensatopc.github.rensato_whistle.WhistleModFabricClient"
+			"io.thejustcube.github.whistle.WhistleModFabricClient"
 		]
 	},
 	"mixins": [
-		"rensato_whistle.mixins.json",
+		"whistle.mixins.json",
 		{
-			"config": "rensato_whistle.client.mixins.json",
+			"config": "whistle.client.mixins.json",
 			"environment": "client"
 		}
 	],
 	"depends": {
-		"fabricloader": ">=0.15.6",
+		"fabricloader": ">=0.16.0",
 		"minecraft": "~1.20",
-		"java": ">=17",
+		"java": ">=21",
 		"fabric-api": "*"
 	},
 	"suggests": {
