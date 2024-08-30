@@ -1,6 +1,6 @@
 # WhistleMod (Fabric)
 
-NeoForge(Main): https://github.com/UECYukkuriProject/WhistleModNeoForge
+NeoForge(Main): https://github.com/UECYukkuriProject/WhistleMod
 
 ---
 
